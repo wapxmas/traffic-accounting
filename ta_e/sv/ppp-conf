@@ -1,0 +1,3 @@
+log_file=(/var/trafacct/ppp-log)+(i,o,b,m,f)
+log_by_ip=(d212.188.97.24)+(/var/trafacct/ppp-bip-log)+(i)+(name4)
+deny_ip_in_name=(name4)+(a212.188.98-115.0-254)

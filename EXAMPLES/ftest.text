@@ -1,0 +1,350 @@
+--- log_file ---
+log_file=(/var/trafacct/testing/log_file)+(a)+(log_file)
+log_file=(/var/trafacct/testing/log_file2)+(a)+(log_file2)
+log_file=(/var/trafacct/testing/log_file-i)+(i)+(log_file3)
+log_file=(/var/trafacct/testing/log_file-o)+(o)+(log_file4)
+
+--- stat_global ---
+stat_global=(/var/trafacct/testing/stat_global)+(a)+(stat_global)
+stat_global=(/var/trafacct/testing/stat_global2)+(a)+(stat_global2)
+stat_global=(/var/trafacct/testing/stat_global-i)+(i)+(stat_global3)
+stat_global=(/var/trafacct/testing/stat_global-o)+(o)+(stat_global4)
+
+--- stat_by_dev ---
+stat_by_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(/var/trafacct/testing/stat_by_dev)+(a)+(stat_by_dev)
+stat_by_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(/var/trafacct/testing/stat_by_dev2)+(a)+(stat_by_dev2)
+stat_by_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(/var/trafacct/testing/stat_by_dev-i)+(i)+(stat_by_dev3)
+stat_by_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(/var/trafacct/testing/stat_by_dev-o)+(o)+(stat_by_dev4)
+
+--- stat_by_ip_global ---
+stat_by_ip_global=(a127.0.0.1-10)+(/var/trafacct/testing/stat_by_ip_global)+(a)+(stat_by_ip_global)
+stat_by_ip_global=(a127.0.0.1-10)+(/var/trafacct/testing/stat_by_ip_global2)+(a)+(stat_by_ip_global2)
+stat_by_ip_global=(a127.0.0.1-10)+(/var/trafacct/testing/stat_by_ip_global-i)+(i)+(stat_by_ip_global3)
+stat_by_ip_global=(a127.0.0.1-10)+(/var/trafacct/testing/stat_by_ip_global-o)+(o)+(stat_by_ip_global4)
+stat_by_ip_global=(a127.0.0.20-30)+(/var/trafacct/testing/stat_by_ip_global5)+(a)+(stat_by_ip_global5)
+
+--- stat_by_ip_dev ---
+stat_by_ip_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(a127.0.0.1-10)+(/var/trafacct/testing/stat_by_ip_dev)+(a)+(stat_by_ip_dev)
+stat_by_ip_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(a127.0.0.1-10)+(/var/trafacct/testing/stat_by_ip_dev2)+(a)+(stat_by_ip_dev2)
+stat_by_ip_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(a127.0.0.1-10)+(/var/trafacct/testing/stat_by_ip_dev-i)+(i)+(stat_by_ip_dev3)
+stat_by_ip_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(a127.0.0.1-10)+(/var/trafacct/testing/stat_by_ip_dev-o)+(o)+(stat_by_ip_dev4)
+stat_by_ip_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(a127.0.0.20-30)+(/var/trafacct/testing/stat_by_ip_dev-5)+(a)+(stat_by_ip_dev5)
+
+--- deny_ip_global ---
+deny_ip_global=(d127.0.0.1)
+
+
+
+--- deny_ip_in_type ---
+deny_ip_in_type=(o)+(d127.0.0.8)
+
+--- deny_ip_in_name ---
+deny_ip_in_name=(stat_by_ip_dev2)+(a127.0.0.8)
+
+--- deny_ip_in_dev ---
+deny_ip_in_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(d127.0.0.8)
+
+--- deny_dev ---
+deny_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)
+
+--- time_stamp ---
+time_stamp=(yes)
+
+--- log_by_ip ---
+log_by_ip=(a127.0.0.1-10)+(/var/trafacct/testing/log_by_ip)+(a)+(log_by_ip)
+log_by_ip=(a127.0.0.1-10)+(/var/trafacct/testing/log_by_ip2)+(a)+(log_by_ip2)
+log_by_ip=(a127.0.0.1-10)+(/var/trafacct/testing/log_by_ip-i)+(i)+(log_by_ip3)
+log_by_ip=(a127.0.0.1-10)+(/var/trafacct/testing/log_by_ip-o)+(o)+(log_by_ip4)
+log_by_ip=(a127.0.0.20-30)+(/var/trafacct/testing/log_by_ip-5)+(a)+(log_by_ip5)
+
+--- stat_time_on ---
+stat_time_on=(stat_global)+(/var/trafacct/testing/stat_time_on_test)+(*/2|*|*|*|*|*|*)+(dd,mo,yr,ww,hh,mm,ss)
+
+--- log_by_each_ip ---
+log_by_each_ip=(a127.0.0.1-10)+(/var/trafacct/testing/log_by_each_ip)+(a)+(log_by_each_ip)
+log_by_each_ip=(a127.0.0.1-10)+(/var/trafacct/testing/log_by_each_ip2)+(a)+(log_by_each_ip2)
+log_by_each_ip=(a127.0.0.1-10)+(/var/trafacct/testing/log_by_each_ip-i)+(i)+(log_by_each_ip3)
+log_by_each_ip=(a127.0.0.1-10)+(/var/trafacct/testing/log_by_each_ip-o)+(o)+(log_by_each_ip4)
+log_by_each_ip=(a127.0.0.20-30)+(/var/trafacct/testing/log_by_each_ip-5)+(a)+(log_by_each_ip5)
+
+--- save_on_time ---
+save_on_time=(/var/trafacct/testing/sv_time_by_iface-)
+
+--- rs_by_proto_global ---
+rs_by_proto_global=(6,17)
+
+--- al_only_proto_global ---
+al_only_proto_global=(6)
+
+--- rs_by_proto_idev ---
+rs_by_proto_idev=(lo1,lo2,lo3,lo4,loz,lo5,lo6,lo7)+(6)
+
+--- rs_by_proto_name ---
+rs_by_proto_name=(stat_global)+(6)
+
+--- al_by_proto_idev ---
+al_by_proto_idev=(lo1,lo2,lo3,lo4,loz,lo5,lo6,lo7)+(6,17)
+
+--- al_by_proto_name ---
+al_by_proto_name=(stat_global)+(6)
+
+--- rs_by_port_global ---
+rs_by_port_global=(6)+(a10-60)
+
+--- al_by_port_global ---
+al_by_port_global=(6)+(a10-60)
+
+--- al_by_port_itype ---
+al_by_port_itype=(i)+(6)+(a10-60)
+
+--- rs_by_port_itype ---
+rs_by_port_itype=(i)+(6)+(a10-60)
+
+--- rs_by_proto_itype ---
+rs_by_proto_itype=(i)+(6)
+
+--- rs_by_port_idev ---
+rs_by_port_idev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(6)+(a10-60)
+
+--- al_by_port_idev ---
+al_by_port_idev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(6)+(a10-60)
+
+--- al_by_proto_itype ---
+al_by_proto_itype=(i)+(1,17)
+
+--- rs_by_port_name ---
+rs_by_port_name=(stat_global)+(6)+(a10-60)
+
+--- al_by_port_name ---
+al_by_port_name=(stat_global)+(6)+(a10-60)
+
+--- bin_stat_X ---
+bin_stat_global=(/var/trafacct/testing/bin_stat_global)+(a)+(bin_stat_global)
+
+--- 
+bin_stat_by_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(/var/trafacct/testing/bin_stat_by_dev)+(a)+(bin_stat_by_dev)
+
+--- 
+bin_stat_by_ip_global=(a127.0.0.1-10)+(/var/trafacct/testing/bin_stat_by_ip_global)+(a)+(bin_stat_by_ip_global)
+
+--- 
+bin_stat_by_ip_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(a127.0.0.1-10)+(/var/trafacct/testing/bin_stat_by_ip_dev)+(a)+(bin_stat_by_ip_dev)
+
+full_stat_global=(/var/trafacct/testing/full_stat_global)+(a)+(full_stat_global)
+full_stat_by_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(/var/trafacct/testing/full_stat_by_dev)+(a)+(full_stat_by_dev)
+full_stat_by_ip_global=(a127.0.0.1-10)+(/var/trafacct/testing/full_stat_by_ip_global)+(a)+(full_stat_by_ip_global)
+full_stat_by_ip_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(a127.0.0.1-10)+(/var/trafacct/testing/full_stat_by_ip_dev)+(a)+(full_stat_by_ip_dev)
+
+bin_full_stat_global=(/var/trafacct/testing/bin_full_stat_global)+(a)+(bin_full_stat_global)
+bin_full_stat_by_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(/var/trafacct/testing/bin_full_stat_by_dev)+(a)+(bin_full_stat_by_dev)
+bin_full_stat_by_ip_global=(a127.0.0.1-10)+(/var/trafacct/testing/bin_full_stat_by_ip_global)+(a)+(bin_full_stat_by_ip_global)
+bin_full_stat_by_ip_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(a127.0.0.1-10)+(/var/trafacct/testing/bin_full_stat_by_ip_dev)+(a)+(bin_full_stat_by_ip_dev)
+
+priority=(-20)
+
+log_by_port=(6)+(a1-60)+(/var/trafacct/testing/log_by_port)+(a)+(log_by_port)
+log_by_port=(6)+(a1-60)+(/var/trafacct/testing/log_by_port2)+(a)+(log_by_port2)
+log_by_port=(6)+(a1-60)+(/var/trafacct/testing/log_by_port-i)+(i)+(log_by_port3)
+log_by_port=(6)+(a1-60)+(/var/trafacct/testing/log_by_port-o)+(o)+(log_by_port4)
+
+log_by_each_port=(6)+(a1-60)+(/var/trafacct/testing/log_by_each_port)+(a)+(log_by_each_port)
+log_by_each_port=(6)+(a1-60)+(/var/trafacct/testing/log_by_each_port2)+(a)+(log_by_each_port2)
+log_by_each_port=(6)+(a1-60)+(/var/trafacct/testing/log_by_each_port-i)+(i)+(log_by_each_port3)
+log_by_each_port=(6)+(a1-60)+(/var/trafacct/testing/log_by_each_port-o)+(o)+(log_by_each_port4)
+
+log_by_proto=(6)+(/var/trafacct/testing/log_by_proto)+(a)+(log_by_proto)
+log_by_proto=(6)+(/var/trafacct/testing/log_by_proto2)+(a)+(log_by_proto2)
+log_by_proto=(6)+(/var/trafacct/testing/log_by_proto-i)+(i)+(log_by_proto3)
+log_by_proto=(6)+(/var/trafacct/testing/log_by_proto-o)+(o)+(log_by_proto4)
+
+log_by_each_proto=(6,17,1)+(/var/trafacct/testing/log_by_each_proto)+(a)+(log_by_each_proto)
+log_by_each_proto=(6,17,1)+(/var/trafacct/testing/log_by_each_proto2)+(a)+(log_by_each_proto2)
+log_by_each_proto=(6,17,1)+(/var/trafacct/testing/log_by_each_proto-i)+(i)+(log_by_each_proto3)
+log_by_each_proto=(6,17,1)+(/var/trafacct/testing/log_by_each_proto-o)+(o)+(log_by_each_proto4)
+
+log_by_port_ip=(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/log_by_port_ip)+(a)+(log_by_port_ip)
+log_by_port_ip=(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/log_by_port_ip2)+(a)+(log_by_port_ip2)
+log_by_port_ip=(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/log_by_port_ip-i)+(i)+(log_by_port_ip3)
+log_by_port_ip=(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/log_by_port_ip-o)+(o)+(log_by_port_ip4)
+log_by_port_ip=(6)+(a127.0.0.20-30)+(a1-60)+(/var/trafacct/testing/log_by_port_ip5)+(o)+(log_by_port_ip5)
+
+log_by_port_ip_each=(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/log_by_port_ip_each)+(a)+(log_by_port_ip_each)
+log_by_port_ip_each=(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/log_by_port_ip_each2)+(a)+(log_by_port_ip_each2)
+log_by_port_ip_each=(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/log_by_port_ip_each-i)+(i)+(log_by_port_ip_each3)
+log_by_port_ip_each=(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/log_by_port_ip_each-o)+(o)+(log_by_port_ip_each4)
+log_by_port_ip_each=(6)+(a127.0.0.20-30)+(a1-60)+(/var/trafacct/testing/log_by_port_ip_each5)+(o)+(log_by_port_ip_each5)
+
+log_by_eport_eip=(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/log_by_eport_eip)+(a)+(log_by_eport_eip)
+log_by_eport_eip=(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/log_by_eport_eip2)+(a)+(log_by_eport_eip2)
+log_by_eport_eip=(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/log_by_eport_eip-i)+(i)+(log_by_eport_eip3)
+log_by_eport_eip=(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/log_by_eport_eip-o)+(o)+(log_by_eport_eip4)
+log_by_eport_eip=(6)+(a127.0.0.20-30)+(a1-60)+(/var/trafacct/testing/log_by_eport_eip5)+(o)+(log_by_eport_eip5)
+
+log_by_each_ip_local=(a127.0.0.1-10)+(/var/trafacct/testing/log_by_each_ip_local)+(a)+(log_by_each_ip_local)
+log_by_each_ip_local=(a127.0.0.1-10)+(/var/trafacct/testing/log_by_each_ip_local2)+(a)+(log_by_each_ip_local2)
+log_by_each_ip_local=(a127.0.0.1-10)+(/var/trafacct/testing/log_by_each_ip_local-i)+(i)+(log_by_each_ip_local3)
+log_by_each_ip_local=(a127.0.0.1-10)+(/var/trafacct/testing/log_by_each_ip_local-o)+(o)+(log_by_each_ip_local4)
+log_by_each_ip_local=(a127.0.0.20-30)+(/var/trafacct/testing/log_by_each_ip_local-5)+(a)+(log_by_each_ip_local5)
+
+log_by_ip_local=(a127.0.0.1-10)+(/var/trafacct/testing/log_by_ip_local)+(a)+(log_by_ip_local)
+log_by_ip_local=(a127.0.0.1-10)+(/var/trafacct/testing/log_by_ip_local2)+(a)+(log_by_ip_local2)
+log_by_ip_local=(a127.0.0.1-10)+(/var/trafacct/testing/log_by_ip_local-i)+(i)+(log_by_ip_local3)
+log_by_ip_local=(a127.0.0.1-10)+(/var/trafacct/testing/log_by_ip_local-o)+(o)+(log_by_ip_local4)
+log_by_ip_local=(a127.0.0.20-30)+(/var/trafacct/testing/log_by_ip_local-5)+(a)+(log_by_ip_local5)
+
+deny_ip_ptype_iname=(stat_global)+(d127.0.0.8)+(o)
+
+log_by_proto_ip=(a127.0.0.1-10)+(6)+(/var/trafacct/testing/log_by_proto_ip)+(a)+(log_by_proto_ip)
+log_by_proto_ip=(a127.0.0.1-10)+(6)+(/var/trafacct/testing/log_by_proto_ip2)+(a)+(log_by_proto_ip2)
+log_by_proto_ip=(a127.0.0.1-10)+(6)+(/var/trafacct/testing/log_by_proto_ip-i)+(i)+(log_by_proto_ip3)
+log_by_proto_ip=(a127.0.0.1-10)+(6)+(/var/trafacct/testing/log_by_proto_ip-o)+(o)+(log_by_proto_ip4)
+log_by_proto_ip=(a127.0.0.20-30)+(6)+(/var/trafacct/testing/log_by_proto_ip5)+(a)+(log_by_proto_ip5)
+
+log_by_proto_ip_each=(a127.0.0.1-10)+(6)+(/var/trafacct/testing/log_by_proto_ip_each)+(a)+(log_by_proto_ip_each)
+log_by_proto_ip_each=(a127.0.0.1-10)+(6)+(/var/trafacct/testing/log_by_proto_ip_each2)+(a)+(log_by_proto_ip_each2)
+log_by_proto_ip_each=(a127.0.0.1-10)+(6)+(/var/trafacct/testing/log_by_proto_ip_each-i)+(i)+(log_by_proto_ip_each3)
+log_by_proto_ip_each=(a127.0.0.1-10)+(6)+(/var/trafacct/testing/log_by_proto_ip_each-o)+(o)+(log_by_proto_ip_each4)
+log_by_proto_ip_each=(a127.0.0.20-30)+(6)+(/var/trafacct/testing/log_by_proto_ip_each5)+(a)+(log_by_proto_ip_each5)
+
+log_by_eproto_eip=(a127.0.0.1-10)+(6,1,17)+(/var/trafacct/testing/log_by_eproto_eip)+(a)+(log_by_eproto_eip)
+log_by_eproto_eip=(a127.0.0.1-10)+(6,1,17)+(/var/trafacct/testing/log_by_eproto_eip2)+(a)+(log_by_eproto_eip2)
+log_by_eproto_eip=(a127.0.0.1-10)+(6,1,17)+(/var/trafacct/testing/log_by_eproto_eip-i)+(i)+(log_by_eproto_eip3)
+log_by_eproto_eip=(a127.0.0.1-10)+(6,1,17)+(/var/trafacct/testing/log_by_eproto_eip-o)+(o)+(log_by_eproto_eip4)
+log_by_eproto_eip=(a127.0.0.20-30)+(6)+(/var/trafacct/testing/log_by_eproto_eip5)+(a)+(log_by_eproto_eip5)
+
+ls_by_iface=(skin_b.cf)+(/var/trafacct/testing/ls-iface)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls-iface)
+ls_by_iface=(skin_b.cf)+(/var/trafacct/testing/ls-iface2)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls-iface2)
+ls_by_iface=(skin_b.cf)+(/var/trafacct/testing/ls-iface-i)+(i)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls-iface3)
+ls_by_iface=(skin_b.cf)+(/var/trafacct/testing/ls-iface-o)+(o)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls-iface4)
+ls_by_iface=(skin_b.cf)+(/var/trafacct/testing/ls-iface-h)+(a)+(*/5|*|*|*|*|*|*)+(_%UT.html)+(s)+(ls-iface5)
+
+ls_by_each_ip=(skin_b.cf)+(a127.0.0.1-10)+(/var/trafacct/testing/ls_by_each_ip)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_each_ip)
+ls_by_each_ip=(skin_b.cf)+(a127.0.0.1-10)+(/var/trafacct/testing/ls_by_each_ip2)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_each_ip2)
+ls_by_each_ip=(skin_b.cf)+(a127.0.0.1-10)+(/var/trafacct/testing/ls_by_each_ip-i)+(i)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_each_ip3)
+ls_by_each_ip=(skin_b.cf)+(a127.0.0.1-10)+(/var/trafacct/testing/ls_by_each_ip-o)+(o)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_each_ip4)
+ls_by_each_ip=(skin_b.cf)+(a127.0.0.1-10)+(/var/trafacct/testing/ls_by_each_ip-h)+(a)+(*/5|*|*|*|*|*|*)+(_%UT.html)+(s)+(ls_by_each_ip5)
+ls_by_each_ip=(skin_b.cf)+(a127.0.0.30-50)+(/var/trafacct/testing/ls_by_each_ip6)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_each_ip6)
+
+ip_entry_list=(100)+(/var/trafacct/testing/ip_entry_list)
+
+alo_ip_global=(d127.0.0.1)
+alo_ip_in_type=(o)+(d127.0.0.8)
+alo_ip_in_name=(stat_global)+(a127.0.0.8)
+alo_ip_in_dev=(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)+(d127.0.0.8)
+alo_dev=(lo1,lo2,lo3,lo4,lo56,lo5,lo6,lo7)
+alo_ip_ptype_iname=(stat_global)+(d127.0.0.8)+(o)
+
+ip_range_traf_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.1-10)+(/bin/tprog 1 %IP %TP %LM)+(ip_range_traf_limit)
+ip_range_traf_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.1-10)+(/bin/tprog 2 %IP %TP %LM)+(ip_range_traf_limit2)
+ip_range_traf_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.20-30)+(/bin/tprog 3 %IP %TP %LM)+(ip_range_traf_limit3)
+
+ip_each_traf_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.1-10)+(/bin/tprog 1 %IP %TP %LM)+(ip_each_traf_limit)
+ip_each_traf_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.1-10)+(/bin/tprog 2 %IP %TP %LM)+(ip_each_traf_limit2)
+ip_each_traf_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.20-30)+(/bin/tprog 3 %IP %TP %LM)+(ip_each_traf_limit3)
+
+port_range_limit=(i#50,b#123,f#56,o#1000)+(6)+(a1-60)+(/bin/tprog_port 1 %PR %PO %TP %LM %IN)+(port_range_limit)
+port_range_limit=(i#50,b#123,f#56,o#1000)+(6)+(a1-60)+(/bin/tprog_port 2 %PR %PO %TP %LM %IN)+(port_range_limit2)
+port_range_limit=(i#50,b#123,f#56,o#1000)+(6)+(a70-80)+(/bin/tprog_port 3 %PR %PO %TP %LM %IN)+(port_range_limit3)
+
+each_port_limit=(i#50,b#123,f#56,o#1000)+(6)+(a1-60)+(/bin/tprog_port 1 %PR %PO %TP %LM %IN)+(each_port_limit)
+each_port_limit=(i#50,b#123,f#56,o#1000)+(6)+(a1-60)+(/bin/tprog_port 2 %PR %PO %TP %LM %IN)+(each_port_limit2)
+each_port_limit=(i#50,b#123,f#56,o#1000)+(6)+(a70-80)+(/bin/tprog_port 3 %PR %PO %TP %LM %IN)+(each_port_limit3)
+
+proto_range_limit=(i#50,b#123,f#56,o#1000)+(1-60)+(/bin/tprog_proto 1 %RP %TP %LM %IN)+(proto_range_limit)
+proto_range_limit=(i#50,b#123,f#56,o#1000)+(1-60)+(/bin/tprog_proto 2 %RP %TP %LM %IN)+(proto_range_limit2)
+proto_range_limit=(i#50,b#123,f#56,o#1000)+(70-80)+(/bin/tprog_proto 3 %RP %TP %LM %IN)+(proto_range_limit3)
+
+proto_each_limit=(i#50,b#123,f#56,o#1000)+(1-60)+(/bin/tprog_proto 1 %PR %TP %LM %IN)+(proto_each_limit)
+proto_each_limit=(i#50,b#123,f#56,o#1000)+(1-60)+(/bin/tprog_proto 2 %PR %TP %LM %IN)+(proto_each_limit2)
+proto_each_limit=(i#50,b#123,f#56,o#1000)+(70-80)+(/bin/tprog_proto 3 %PR %TP %LM %IN)+(proto_each_limit3)
+
+port_ip_limit=(i#50,b#123,f#56,o#1000)+(6)+(a127.0.0.1-10)+(a1-60)+(/bin/tprog_pip 1 %PR %PO %IP %TP %LM %IN)+(port_ip_limit)
+port_ip_limit=(i#50,b#123,f#56,o#1000)+(6)+(a127.0.0.1-10)+(a1-60)+(/bin/tprog_pip 2 %PR %PO %IP %TP %LM %IN)+(port_ip_limit2)
+port_ip_limit=(i#50,b#123,f#56,o#1000)+(6)+(a127.0.0.1-10)+(a80-100)+(/bin/tprog_pip 3 %PR %PO %IP %TP %LM %IN)+(port_ip_limit3)
+port_ip_limit=(i#50,b#123,f#56,o#1000)+(6)+(a127.0.0.20-30)+(a80-100)+(/bin/tprog_pip 4 %PR %PO %IP %TP %LM %IN)+(port_ip_limit4)
+
+port_ip_each_limit=(i#50,b#123,f#56,o#1000)+(6)+(a127.0.0.1-10)+(a1-60)+(/bin/tprog_pip 1 %PR %PO %IP %TP %LM %IN)+(port_ip_each_limit)
+port_ip_each_limit=(i#50,b#123,f#56,o#1000)+(6)+(a127.0.0.1-10)+(a1-60)+(/bin/tprog_pip 2 %PR %PO %IP %TP %LM %IN)+(port_ip_each_limit2)
+port_ip_each_limit=(i#50,b#123,f#56,o#1000)+(6)+(a127.0.0.1-10)+(a80-100)+(/bin/tprog_pip 3 %PR %PO %IP %TP %LM %IN)+(port_ip_each_limit3)
+port_ip_each_limit=(i#50,b#123,f#56,o#1000)+(6)+(a127.0.0.20-30)+(a80-100)+(/bin/tprog_pip 4 %PR %PO %IP %TP %LM %IN)+(port_ip_each_limit4)
+
+eport_eip_limit=(i#50,b#123,f#56,o#1000)+(6)+(a127.0.0.1-10)+(a1-60)+(/bin/tprog_pip 1 %PR %OP %IP %TP %LM %IN)+(eport_eip_limit)
+eport_eip_limit=(i#50,b#123,f#56,o#1000)+(6)+(a127.0.0.1-10)+(a1-60)+(/bin/tprog_pip 2 %PR %OP %IP %TP %LM %IN)+(eport_eip_limit2)
+eport_eip_limit=(i#50,b#123,f#56,o#1000)+(6)+(a127.0.0.1-10)+(a80-100)+(/bin/tprog_pip 3 %PR %OP %IP %TP %LM %IN)+(eport_eip_limit3)
+eport_eip_limit=(i#50,b#123,f#56,o#1000)+(6)+(a127.0.0.20-30)+(a80-100)+(/bin/tprog_pip 4 %PR %OP %IP %TP %LM %IN)+(eport_eip_limit4)
+
+proto_ip_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.1-10)+(1-60)+(/bin/tprog_prip 1 %RP %IP %TP %LM %IN)+(proto_ip_limit)
+proto_ip_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.1-10)+(1-60)+(/bin/tprog_prip 2 %RP %IP %TP %LM %IN)+(proto_ip_limit2)
+proto_ip_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.1-10)+(80-100)+(/bin/tprog_prip 3 %RP %IP %TP %LM %IN)+(proto_ip_limit3)
+proto_ip_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.20-30)+(1-60)+(/bin/tprog_prip 4 %RP %IP %TP %LM %IN)+(proto_ip_limit4)
+
+proto_ip_each_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.1-10)+(1-60)+(/bin/tprog_prip 1 %RP %IP %TP %LM %IN)+(proto_ip_each_limit)
+proto_ip_each_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.1-10)+(1-60)+(/bin/tprog_prip 2 %RP %IP %TP %LM %IN)+(proto_ip_each_limit2)
+proto_ip_each_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.1-10)+(80-100)+(/bin/tprog_prip 3 %RP %IP %TP %LM %IN)+(proto_ip_each_limit3)
+proto_ip_each_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.20-30)+(1-60)+(/bin/tprog_prip 4 %RP %IP %TP %LM %IN)+(proto_ip_each_limit4)
+
+eproto_eip_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.1-10)+(1-60)+(/bin/tprog_prip 1 %PR %IP %TP %LM %IN)+(eproto_eip_limit)
+eproto_eip_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.1-10)+(1-60)+(/bin/tprog_prip 2 %PR %IP %TP %LM %IN)+(eproto_eip_limit2)
+eproto_eip_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.1-10)+(80-100)+(/bin/tprog_prip 3 %PR %IP %TP %LM %IN)+(eproto_eip_limit3)
+eproto_eip_limit=(i#50,b#123,f#56,o#1000)+(a127.0.0.20-30)+(1-60)+(/bin/tprog_prip 4 %PR %IP %TP %LM %IN)+(eproto_eip_limit4)
+
+iface_limit=(i#50,b#123,f#56,o#1000)+(lo6,lo7,lo8,lo9,lo10,lo,lo11,lo12,lo13)+(/bin/tprog_iface 1 %TP %LM %IN)+(iface_limit)
+iface_limit=(i#50,b#123,f#56,o#1000)+(lo6,lo7,lo8,lo9,lo10,lo,lo11,lo12,lo13)+(/bin/tprog_iface 2 %TP %LM %IN)+(iface_limit2)
+iface_limit=(i#50,b#123,f#56,o#1000)+(lo6,lo7,lo8,lo9,lo10,loZ,lo11,lo12,lo13)+(/bin/tprog_iface 3 %TP %LM %IN)+(iface_limit3)
+
+ls_by_port_ip_each=(skin_b.cf)+(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/ls_by_port_ip_each)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_port_ip_each)
+ls_by_port_ip_each=(skin_b.cf)+(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/ls_by_port_ip_each2)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_port_ip_each2)
+ls_by_port_ip_each=(skin_b.cf)+(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/ls_by_port_ip_each-h)+(a)+(*/5|*|*|*|*|*|*)+(_%UT.html)+(h)+(ls_by_port_ip_each3)
+ls_by_port_ip_each=(skin_b.cf)+(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/ls_by_port_ip_each-i)+(i)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_port_ip_each4)
+ls_by_port_ip_each=(skin_b.cf)+(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/ls_by_port_ip_each-o)+(o)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_port_ip_each5)
+ls_by_port_ip_each=(skin_b.cf)+(6)+(a127.0.0.1-10)+(a80-100)+(/var/trafacct/testing/ls_by_port_ip_each6)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_port_ip_each6)
+ls_by_port_ip_each=(skin_b.cf)+(6)+(a127.0.0.30-60)+(a1-60)+(/var/trafacct/testing/ls_by_port_ip_each7)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_port_ip_each7)
+
+ls_by_eport_eip=(skin_b.cf)+(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/ls_by_eport_eip)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_eport_eip)
+ls_by_eport_eip=(skin_b.cf)+(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/ls_by_eport_eip2)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_eport_eip2)
+ls_by_eport_eip=(skin_b.cf)+(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/ls_by_eport_eip-h)+(a)+(*/5|*|*|*|*|*|*)+(_%UT.html)+(h)+(ls_by_eport_eip3)
+ls_by_eport_eip=(skin_b.cf)+(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/ls_by_eport_eip-i)+(i)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_eport_eip4)
+ls_by_eport_eip=(skin_b.cf)+(6)+(a127.0.0.1-10)+(a1-60)+(/var/trafacct/testing/ls_by_eport_eip-o)+(o)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_eport_eip5)
+ls_by_eport_eip=(skin_b.cf)+(6)+(a127.0.0.1-10)+(a80-100)+(/var/trafacct/testing/ls_by_eport_eip6)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_eport_eip6)
+ls_by_eport_eip=(skin_b.cf)+(6)+(a127.0.0.30-60)+(a1-60)+(/var/trafacct/testing/ls_by_eport_eip7)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_eport_eip7)
+
+ls_by_proto_ip_each=(skin_b.cf)+(a127.0.0.1-10)+(1-60)+(/var/trafacct/testing/ls_by_proto_ip_each)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_proto_ip_each)
+ls_by_proto_ip_each=(skin_b.cf)+(a127.0.0.1-10)+(1-60)+(/var/trafacct/testing/ls_by_proto_ip_each2)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_proto_ip_each2)
+ls_by_proto_ip_each=(skin_b.cf)+(a127.0.0.1-10)+(1-60)+(/var/trafacct/testing/ls_by_proto_ip_each-h)+(a)+(*/5|*|*|*|*|*|*)+(_%UT.html)+(h)+(ls_by_proto_ip_each3)
+ls_by_proto_ip_each=(skin_b.cf)+(a127.0.0.1-10)+(1-60)+(/var/trafacct/testing/ls_by_proto_ip_each-i)+(i)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_proto_ip_each4)
+ls_by_proto_ip_each=(skin_b.cf)+(a127.0.0.1-10)+(1-60)+(/var/trafacct/testing/ls_by_proto_ip_each-o)+(o)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_proto_ip_each5)
+ls_by_proto_ip_each=(skin_b.cf)+(a127.0.0.1-10)+(80-100)+(/var/trafacct/testing/ls_by_proto_ip_each6)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_proto_ip_each6)
+ls_by_proto_ip_each=(skin_b.cf)+(a127.0.0.30-50)+(1-60)+(/var/trafacct/testing/ls_by_proto_ip_each7)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_proto_ip_each7)
+
+ls_by_eproto_eip=(skin_b.cf)+(a127.0.0.1-10)+(1-60)+(/var/trafacct/testing/ls_by_eproto_eip)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_eproto_eip)
+ls_by_eproto_eip=(skin_b.cf)+(a127.0.0.1-10)+(1-60)+(/var/trafacct/testing/ls_by_eproto_eip2)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_eproto_eip2)
+ls_by_eproto_eip=(skin_b.cf)+(a127.0.0.1-10)+(1-60)+(/var/trafacct/testing/ls_by_eproto_eip-h)+(a)+(*/5|*|*|*|*|*|*)+(_%UT.html)+(h)+(ls_by_eproto_eip3)
+ls_by_eproto_eip=(skin_b.cf)+(a127.0.0.1-10)+(1-60)+(/var/trafacct/testing/ls_by_eproto_eip-i)+(i)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_eproto_eip4)
+ls_by_eproto_eip=(skin_b.cf)+(a127.0.0.1-10)+(1-60)+(/var/trafacct/testing/ls_by_eproto_eip-o)+(o)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_eproto_eip5)
+ls_by_eproto_eip=(skin_b.cf)+(a127.0.0.1-10)+(80-100)+(/var/trafacct/testing/ls_by_eproto_eip6)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_eproto_eip6)
+ls_by_eproto_eip=(skin_b.cf)+(a127.0.0.30-50)+(1-60)+(/var/trafacct/testing/ls_by_eproto_eip7)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_eproto_eip7)
+
+full_log_by_each_ip=(a127.0.0.1-10)+(/var/trafacct/testing/full_log_by_each_ip)+(a)+(full_log_by_each_ip)
+full_log_by_each_ip=(a127.0.0.1-10)+(/var/trafacct/testing/full_log_by_each_ip2)+(a)+(full_log_by_each_ip2)
+full_log_by_each_ip=(a127.0.0.1-10)+(/var/trafacct/testing/full_log_by_each_ip-i)+(i)+(full_log_by_each_ip3)
+full_log_by_each_ip=(a127.0.0.1-10)+(/var/trafacct/testing/full_log_by_each_ip-o)+(o)+(full_log_by_each_ip4)
+full_log_by_each_ip=(a127.0.0.20-30)+(/var/trafacct/testing/full_log_by_each_ip-5)+(a)+(full_log_by_each_ip5)
+
+ls_full_by_each_ip=(skin_b.cf)+(a127.0.0.1-10)+(/var/trafacct/testing/ls_full_by_each_ip)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_full_by_each_ip)
+ls_full_by_each_ip=(skin_b.cf)+(a127.0.0.1-10)+(/var/trafacct/testing/ls_full_by_each_ip2)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_full_by_each_ip2)
+ls_full_by_each_ip=(skin_b.cf)+(a127.0.0.1-10)+(/var/trafacct/testing/ls_full_by_each_ip-i)+(i)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_full_by_each_ip3)
+ls_full_by_each_ip=(skin_b.cf)+(a127.0.0.1-10)+(/var/trafacct/testing/ls_full_by_each_ip-o)+(o)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_full_by_each_ip4)
+ls_full_by_each_ip=(skin_b.cf)+(a127.0.0.1-10)+(/var/trafacct/testing/ls_full_by_each_ip-h)+(a)+(*/5|*|*|*|*|*|*)+(_%UT.html)+(s)+(ls_full_by_each_ip5)
+ls_full_by_each_ip=(skin_b.cf)+(a127.0.0.30-50)+(/var/trafacct/testing/ls_full_by_each_ip6)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_full_by_each_ip6)
+
+ls_by_each_ip_local=(skin_b.cf)+(a127.0.0.1-10)+(/var/trafacct/testing/ls_by_each_ip_local)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_each_ip_local)
+ls_by_each_ip_local=(skin_b.cf)+(a127.0.0.1-10)+(/var/trafacct/testing/ls_by_each_ip_local2)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_each_ip_local2)
+ls_by_each_ip_local=(skin_b.cf)+(a127.0.0.1-10)+(/var/trafacct/testing/ls_by_each_ip_local-i)+(i)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_each_ip_local3)
+ls_by_each_ip_local=(skin_b.cf)+(a127.0.0.1-10)+(/var/trafacct/testing/ls_by_each_ip_local-o)+(o)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_each_ip_local4)
+ls_by_each_ip_local=(skin_b.cf)+(a127.0.0.1-10)+(/var/trafacct/testing/ls_by_each_ip_local-h)+(a)+(*/5|*|*|*|*|*|*)+(_%UT.html)+(s)+(ls_by_each_ip_local5)
+ls_by_each_ip_local=(skin_b.cf)+(a127.0.0.30-50)+(/var/trafacct/testing/ls_by_each_ip_local6)+(a)+(*/5|*|*|*|*|*|*)+(_%UT)+(t)+(ls_by_each_ip_local6)
+
+deny_dev_in_name=(stat_global)+(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)
+
+alo_dev_in_name=(stat_global)+(lo1,lo2,lo3,lo4,lo,lo5,lo6,lo7)
+

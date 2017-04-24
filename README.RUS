@@ -1,0 +1,53 @@
+Traffic Accounting for Linux x86
+================================
+
+*** NOTE: Этот оригинал файла README для версии TA-1.1.2
+Автор: Yashin Sergey, все комментарии и bugreports отсылайте
+по адресу, yashin.sergey@gmail.com
+Последнюю версию дистрибутива можно найти на http://talinux.hut.ru/,
+или же на http://talinux.narod.ru/.
+
+Краткое описание
+----------------
+
+    ---  Traffic Accouting has written on Assembler, that right way to get
+    	fast for accouting.
+      
+    ---  The newer program for account  traffic on servers and whole machines.
+
+    ---  The Traffic Accouting have support server mode, it mode means that
+        just you have running TA as server on your router and than you can
+        account traffic for the clients machines wich might be placed in other 
+        networks segments or fully other networks.
+       
+    ---  Traffic Accouting have support for full statistic, that includes protocol,
+        ports(if that possible, if protocol have support) and ttl, timestamp, and
+        too much other.
+
+    ---  Traffic Accouting have support for binary logging and staticsic 
+        formats, thus it have to get more faster for account.
+      
+    ---  Traffic Accouting have mindly low configuration files, it means
+        that even though whole children can get started TA.
+      
+    ---  Finally Traffic Accouting this is good tool for system administrator.      
+
+Кому нужна эта программа
+------------------------
+
+- Тому кому нужно/хочется учитывать сетевой траффик.
+
+Установка/Использование
+-----------------------
+
+1) зайдите в каталог с программой.
+   Убедитесь что в системе есть компилятор "nasm".
+   Если его нет, то его можно найти на официальном сайте.
+   Или же, можно просто использовать уже находящийся
+   в каталоге файл "ta".
+2) выполните команду "make".
+3) отредактируйте файл "ta.conf".
+   Описание формата файла в каталоге
+   программы: "DOCS/CONFIGS-RUS.text".
+4) Запустите файл "ta".
+;Copyright (C) 2002 Yashin Sergey <yashin.sergey@gmail.com>	

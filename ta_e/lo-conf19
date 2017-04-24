@@ -1,0 +1,6 @@
+log_file=(/var/trafacct/lo/iface-log)+(a)+(iface-log)
+ls_by_each_ip=(skin_a.cf)+(a127.0.0.1-10)+(/var/trafacct/lo/time/ls-geip)+(a)+(*/10|*|*|*|*|*|*)+(_%UT)+(t)+(ls-geip)
+ls_by_each_ip_local=(skin_a.cf)+(a127.0.0.1-10)+(/var/trafacct/lo/time/ls-leip)+(a)+(*/10|*|*|*|*|*|*)+(_%UT)+(t)+(ls-leip)
+ls_by_port_ip_each=(skin_a.cf)+(6)+(a127.0.0.1-10)+(a1-65535)+(/var/trafacct/lo/time/ls-tcp-gpie)+(a)+(*/10|*|*|*|*|*|*)+(_%UT)+(t)+(ls-tcp-gpie)
+ls_by_port_ip_each=(skin_a.cf)+(17)+(a127.0.0.1-10)+(a1-65535)+(/var/trafacct/lo/time/ls-udp-gpie)+(a)+(*/10|*|*|*|*|*|*)+(_%UT)+(t)+(ls-udp-gpie)
+ls_by_proto_ip_each=(skin_a.cf)+(a127.0.0.1-10)+(0-255)+(/var/trafacct/lo/time/ls-gprie)+(a)+(*/10|*|*|*|*|*|*)+(_%UT)+(t)+(ls-gprie)

@@ -1,0 +1,11 @@
+outfile=lo-conf
+skin=skin_a.cf
+ip_range=a127.0.0.1-10,a127.0.0.15
+main_dir=/var/trafacct/lo/time/
+iface_dir=/var/trafacct/lo/
+time_range=*|*|*|_|*|*|*
+time_month=*|*|*|*|_|*|*
+port_range=a1-65535
+proto_range=0-255
+main_ext=_%UT
+l_type=t

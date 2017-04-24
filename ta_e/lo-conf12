@@ -1,0 +1,7 @@
+log_file=(/var/trafacct/lo-log)+(i,o,f,m,b)
+log_by_port_ip=(6)+(a127.0.0.1-10)+(a30-80)+(/var/trafacct/lo-logBP-IP)+(a)+(LBPname)
+log_by_port_ip_each=(6)+(a127.0.0.1-10)+(a30-80)+(/var/trafacct/lo-logBP-IP-EACH)+(a)+(LBPname)
+log_by_eport_eip=(6)+(a127.0.0.1-10)+(a20-80)+(/var/trafacct/lo-logBEP-EIP)+(a)+(LBPname)
+full_stat_global=(/var/trafacct/loSG)+(a)+(nameSG)
+log_by_each_ip=(a127.0.0.1-10)+(/var/trafacct/lo-LEP-1)+(a)+(nameLEP)
+time_stamp=(yo!)

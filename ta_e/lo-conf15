@@ -1,0 +1,3 @@
+ls_by_iface=(skin1.cf)+(/var/trafacct/LS-OUT)+(i,o,b,f,m)+(*/10|*|*|*|*|*|*)+(.%SS,%MM,%HH,%DD,%MO,%YR,%WW.html)
+time_stamp=(yo!)
+full_stat_global=(/var/trafacct/loSG)+(a)+(nameSG)

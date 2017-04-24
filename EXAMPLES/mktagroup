@@ -1,0 +1,38 @@
+#!/bin/bash
+
+if [ -z ${1} ]&[ -z ${2} ]; then
+    echo "Usage: "`basename ${0}`" <group-name> <config-grp>"; exit;
+fi
+
+outfile=`cat ${2} | grep outfile | cut -d= -f2 `
+skin=`cat ${2} | grep skin | cut -d= -f2 `
+ip_range=`cat ${2} | grep ip_range | cut -d= -f2 `
+main_dir=`cat ${2} | grep main_dir | cut -d= -f2 `
+iface_dir=`cat ${2} | grep iface_dir | cut -d= -f2 `
+time_range=`cat ${2} | grep time_range | cut -d= -f2 `
+time_month=`cat ${2} | grep time_month | cut -d= -f2 `
+port_range=`cat ${2} | grep port_range | cut -d= -f2 `
+proto_range=`cat ${2} | grep proto_range | cut -d= -f2 `
+main_ext=`cat ${2} | grep main_ext | cut -d= -f2 `
+l_type=`cat ${2} | grep l_type | cut -d= -f2 `
+
+cat << EOF >> ${outfile}
+#group-${1}-begin
+ls_by_ip=(${skin})+(${ip_range})+(${main_dir}${1}.ls-lip)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-lip)
+ls_by_each_ip=(${skin})+(${ip_range})+(${main_dir}${1}.ls-geip)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-geip)
+ls_by_proto_ip=(${skin})+(${ip_range})+(${proto_range})+(${main_dir}${1}.ls-gpri)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-gpri)
+ls_by_eproto_ip=(${skin})+(${ip_range})+(${proto_range})+(${main_dir}${1}.ls-gepri)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-gepri)
+ls_by_port_ip=(${skin})+(6)+(${ip_range})+(${port_range})+(${main_dir}${1}.ls-tcp-gpi)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-tcp-gpi)
+#ls_by_eport_ip=(${skin})+(6)+(${ip_range})+(${port_range})+(${main_dir}${1}.ls-tcp-gepi)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-tcp-gepi)
+ls_by_port_ip=(${skin})+(17)+(${ip_range})+(${port_range})+(${main_dir}${1}.ls-udp-gpi)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-udp-gpi)
+#ls_by_eport_ip=(${skin})+(17)+(${ip_range})+(${port_range})+(${main_dir}${1}.ls-udp-gepi)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-udp-gepi)
+ls_by_ip=(${skin})+(${ip_range})+(${main_dir}${1}-m.ls-lip)+(a)+(${time_month})+(${main_ext})+(${l_type})+(ls-lip)
+ls_by_each_ip=(${skin})+(${ip_range})+(${main_dir}${1}-m.ls-geip)+(a)+(${time_month})+(${main_ext})+(${l_type})+(ls-geip)
+ls_by_proto_ip=(${skin})+(${ip_range})+(${proto_range})+(${main_dir}${1}-m.ls-gpri)+(a)+(${time_month})+(${main_ext})+(${l_type})+(ls-gpri)
+ls_by_eproto_ip=(${skin})+(${ip_range})+(${proto_range})+(${main_dir}${1}-m.ls-gepri)+(a)+(${time_month})+(${main_ext})+(${l_type})+(ls-gepri)
+ls_by_port_ip=(${skin})+(6)+(${ip_range})+(${port_range})+(${main_dir}${1}-m.ls-tcp-gpi)+(a)+(${time_month})+(${main_ext})+(${l_type})+(ls-tcp-gpi)
+#ls_by_eport_ip=(${skin})+(6)+(${ip_range})+(${port_range})+(${main_dir}${1}-m.ls-tcp-gepi)+(a)+(${time_month})+(${main_ext})+(${l_type})+(ls-tcp-gepi)
+ls_by_port_ip=(${skin})+(17)+(${ip_range})+(${port_range})+(${main_dir}${1}-m.ls-udp-gpi)+(a)+(${time_month})+(${main_ext})+(${l_type})+(ls-udp-gpi)
+#ls_by_eport_ip=(${skin})+(17)+(${ip_range})+(${port_range})+(${main_dir}${1}-m.ls-udp-gepi)+(a)+(${time_month})+(${main_ext})+(${l_type})+(ls-udp-gepi)
+#group-${1}-end
+EOF

@@ -1,0 +1,8 @@
+#define PTYPE_LOGIN	1
+#define PTYPE_ERROR	2
+#define	PTYPE_LOGOUT	3
+#define PTYPE_ENTRY	4
+#define PTYPE_TIMEOUT	5
+#define PTYPE_ELOGN	6
+#define PTYPE_ERRTP	7
+#define PTYPE_CHKLOGIN	8

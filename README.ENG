@@ -1,0 +1,48 @@
+Traffic Accouting for Linux x86
+===============================
+
+*** NOTE: This is original of the file README, since TA v1.1.2
+Author: Yashin Sergey, please send me all comments, bugreports, patches
+and much more that you can find to me useful.
+e-mail: yashin.sergey@gmail.com
+
+Description
+-----------------
+    ---  Traffic Accouting has written on Assembler, that right way to get
+    	fast for accouting.
+      
+    ---  The newer program for account  traffic on servers and whole machines.
+
+    ---  The Traffic Accouting have support server mode, it mode means that
+        just you have running TA as server on your router and than you can
+        account traffic for the clients machines wich might be placed in other 
+        networks segments or fully other networks.
+       
+    ---  Traffic Accouting have support for full statistic, that includes protocol,
+        ports(if that possible, if protocol have support) and ttl, timestamp, and
+        too much other.
+
+    ---  Traffic Accouting have support for binary logging and staticsic 
+        formats, thus it have to get more faster for account.
+      
+    ---  Traffic Accouting have mindly low configuration files, it means
+        that even though whole children can get started TA.
+      
+    ---  Finally Traffic Accouting this is good tool for system administrator.      
+
+Who that`s program need
+-----------------------
+- For ppls who wants to logs its network traffic.
+
+Installation/Usage
+------------------
+1) Check that nasm packet have to be in your system.
+   Anyway if you do not need to recompile source code
+   of the ta, then you have to use the binary file "ta",
+   if you then go to step 4.   
+2) run "make" command.
+3) edit the config file "ta.conf".
+   Format of the file "ta.conf" you can find
+   in "DOCS/CONFIGS-ENG.text".
+4) Launch the ta with command "ta".
+;Copyright (C) 2002 Yashin Sergey <yashin.sergey@gmail.com>

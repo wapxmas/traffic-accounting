@@ -1,0 +1,7 @@
+ip_skin=(<font color=red size=+1><b>%IP</font></b>)
+dev_skin=(<font color=blue size=+1><b>%DV</font></b>)
+io_skin=(<font color=blue size=+1><b>i:%I,o:%O,b:%B,m:%M,f:%F</font></b>)
+head_skin=(<html><head><title>Traffic Accounting</title></head><body bgcolor="#cccc99">)
+end_skin=(</body></html>)
+cr_traf_skin=(<center><font color=brown size=+2><b><i>Current</i> Traffic:</b><br></center></font>)
+jt_traf_skin=(<center><font color=brown size=+2><b><i>Joint</i> Traffic:</b><br></center></font>)

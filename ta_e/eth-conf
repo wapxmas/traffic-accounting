@@ -1,0 +1,2 @@
+ls_by_iface=(skin_b.cf)+(/var/trafacct/LS-IFACE-ETH)+(i,o,b,f,m)+(*/10|*|*|*|*|*|*)+(.%SS,%MM,%HH,%DD,%MO,%YR,%WW.html)
+ls_by_each_ip=(skin_a.cf)+(a192.168.0-10.1-10)+(/var/trafacct/LS-IP-ETH)+(i,o,b,f,m)+(*/10|*|*|*|*|*|*)+(.%SS,%MM,%HH,%DD,%MO,%YR,%WW.html)

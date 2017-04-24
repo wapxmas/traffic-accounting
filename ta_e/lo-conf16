@@ -1,0 +1,4 @@
+ls_by_each_ip=(skin_a.cf)+(a127.0.0.1-9,a127.0.0.10-56)+(/var/trafacct/loEIP)+(i,o,b,f,m)+(*/10|*|*|*|*|*|*)+(.%SS,%MM,%HH,%DD,%MO,%YR,%WW.html)
+ls_by_iface=(skin_b.cf)+(/var/trafacct/LS-OUT)+(i,o,b,f,m)+(*/10|*|*|*|*|*|*)+(.%SS,%MM,%HH,%DD,%MO,%YR,%WW.html)
+time_stamp=(yo!)
+full_stat_global=(/var/trafacct/loSG)+(a)+(nameSG)

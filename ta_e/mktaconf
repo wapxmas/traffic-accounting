@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [ -z ${1} ]; then
+    echo "Usage: "`basename ${0}`" <config-raw>"; exit;
+fi
+
+outfile=`cat ${1} | grep outfile | cut -d= -f2 `
+skin=`cat ${1} | grep skin | cut -d= -f2 `
+ip_range=`cat ${1} | grep ip_range | cut -d= -f2 `
+main_dir=`cat ${1} | grep main_dir | cut -d= -f2 `
+iface_dir=`cat ${1} | grep iface_dir | cut -d= -f2 `
+time_range=`cat ${1} | grep time_range | cut -d= -f2 `
+port_range=`cat ${1} | grep port_range | cut -d= -f2 `
+proto_range=`cat ${1} | grep proto_range | cut -d= -f2 `
+main_ext=`cat ${1} | grep main_ext | cut -d= -f2 `
+l_type=`cat ${1} | grep l_type | cut -d= -f2 `
+
+cat << EOF >> ${outfile}
+ls_by_each_ip=(${skin})+(${ip_range})+(${main_dir}ls-geip)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-geip)
+ls_by_each_ip_local=(${skin})+(${ip_range})+(${main_dir}ls-leip)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-leip)
+ls_by_port_ip_each=(${skin})+(6)+(${ip_range})+(a1-65535)+(${main_dir}ls-tcp-gpie)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-tcp-gpie)
+ls_by_port_ip_each=(${skin})+(17)+(${ip_range})+(a1-65535)+(${main_dir}ls-udp-gpie)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-udp-gpie)
+ls_by_proto_ip_each=(${skin})+(${ip_range})+(0-255)+(${main_dir}ls-gprie)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-gprie)
+ls_by_iface=(${skin})+(${main_dir}ls-iface)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-iface)
+ls_by_eproto_eip=(${skin})+(${ip_range})+(0-255)+(${main_dir}ls-geprei)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-geprei)
+#ls_by_eport_eip=(${skin})+(6)+(${ip_range})+(a1-65535)+(${main_dir}ls-tcp-gepei)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-tcp-gepei)
+#ls_by_eport_eip=(${skin})+(17)+(${ip_range})+(a1-65535)+(${main_dir}ls-udp-gepei)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-udp-gepei)
+#ls_full_by_each_ip=(${skin})+(${ip_range})+(${main_dir}ls-gfeip)+(a)+(${time_range})+(${main_ext})+(${l_type})+(ls-gfeip)
+save_on_time=(${iface_dir}svdb_)
+EOF
